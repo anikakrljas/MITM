@@ -153,14 +153,14 @@ Before running the demonstration in a **controlled lab environment**, it is nece
 
 On a **Windows** machine you can view the ARP table using the following command:
 
-```bash
-arp -a
+```arp -a```
 
 
 🐧 Installing Required Tools on Kali Linux
 
 On Kali Linux, we need to install a package that contains network analysis tools.
-```sudo su
-```sudo apt install dsniff
+
+```sudo su```
+```sudo apt install dsniff```
 
 The dsniff package includes several tools used for network traffic analysis and security testing.
