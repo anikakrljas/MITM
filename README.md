@@ -143,4 +143,24 @@ The basic idea:
 4️⃣ The attacker forwards the traffic to the real router while **intercepting or modifying the packets**.
 
 ---
+# 🧪 Basic Lab Preparation
 
+Before running the demonstration in a **controlled lab environment**, it is necessary to check network information and install the required tools.
+
+---
+
+## 🖥️ Checking the ARP Table on Windows
+
+On a **Windows** machine you can view the ARP table using the following command:
+
+```bash
+arp -a
+
+
+🐧 Installing Required Tools on Kali Linux
+
+On Kali Linux, we need to install a package that contains network analysis tools.
+```sudo su
+```sudo apt install dsniff
+
+The dsniff package includes several tools used for network traffic analysis and security testing.
