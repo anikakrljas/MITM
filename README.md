@@ -60,21 +60,6 @@ However, ARP was designed **without authentication mechanisms**, meaning that de
 Because of this design limitation, attackers can manipulate ARP tables on devices inside the network.
 
 ---
-# 🧪 ARP Spoofing / ARP Poisoning
-
-One of the most common ways to perform a local MITM attack is **ARP Spoofing**.
-
-The basic idea:
-
-1️⃣ The attacker sends **forged ARP replies** to devices on the network.  
-
-2️⃣ The victim associates the attacker's **MAC address** with another device's IP address (usually the router).  
-
-3️⃣ Traffic intended for the router is instead sent to the attacker.  
-
-4️⃣ The attacker forwards the traffic to the real router while **intercepting or modifying the packets**.
-
----
 
 # 🛡️ Protection Against MITM Attacks
 
@@ -141,3 +126,21 @@ These tools can help administrators identify **potential MITM attempts** early.
 ---
 
 Understanding how MITM attacks work is an important step toward building **more secure networks and safer communication systems**.
+
+---
+# 🧪 ARP Spoofing / ARP Poisoning
+
+One of the most common ways to perform a local MITM attack is **ARP Spoofing**.
+
+The basic idea:
+
+1️⃣ The attacker sends **forged ARP replies** to devices on the network.  
+
+2️⃣ The victim associates the attacker's **MAC address** with another device's IP address (usually the router).  
+
+3️⃣ Traffic intended for the router is instead sent to the attacker.  
+
+4️⃣ The attacker forwards the traffic to the real router while **intercepting or modifying the packets**.
+
+---
+
