@@ -31,7 +31,7 @@ The purpose of this repository is to **learn how attacks work in order to better
 A **Man-in-the-Middle (MITM)** attack occurs when an attacker secretly intercepts communication between two devices on a network.
 
 Normally communication happens directly:
-Client → Server
+Client → Server.
 During a MITM attack it becomes:
 Client → Attacker → Server
 
@@ -54,7 +54,7 @@ IP Address → MAC Address
 inside a local network.
 
 For example:
-192.168.1.1 → AA:BB:CC:DD:EE:FF
+192.168.1.1 → AA:BB:CC:DD:EE:FF.
 However, ARP was designed **without authentication mechanisms**, meaning that devices generally **trust ARP replies automatically**.
 
 Because of this design limitation, attackers can manipulate ARP tables on devices inside the network.
@@ -73,3 +73,71 @@ The basic idea:
 3️⃣ Traffic intended for the router is instead sent to the attacker.  
 
 4️⃣ The attacker forwards the traffic to the real router while **intercepting or modifying the packets**.
+
+---
+
+# 🛡️ Protection Against MITM Attacks
+
+Although Man-in-the-Middle attacks can be dangerous, there are several ways to reduce the risk and protect network communication.
+
+### 🔒 Use HTTPS
+
+Always prefer websites that use **HTTPS (Hypertext Transfer Protocol Secure)**.
+
+HTTPS encrypts communication between the client and the server using **TLS/SSL**, which prevents attackers from easily reading or modifying transmitted data even if they intercept the traffic.
+
+---
+
+### 📶 Be Careful on Public Wi-Fi Networks
+
+Public networks (such as those in cafés, airports, hotels, or universities) are common targets for MITM attacks.
+
+When connecting to public Wi-Fi:
+
+- avoid logging into sensitive accounts
+- avoid accessing banking or personal services
+- ensure websites are using **HTTPS**
+
+Attackers on the same network may attempt to intercept traffic using techniques such as **ARP spoofing**.
+
+---
+
+### 🔐 Use a VPN
+
+A **Virtual Private Network (VPN)** encrypts your internet traffic and creates a secure tunnel between your device and the VPN server.
+
+This helps protect your data from attackers who might be monitoring the local network.
+
+---
+
+### 🔄 Keep Systems and Software Updated
+
+Regularly updating your **operating system, browsers, and applications** is important because updates often include:
+
+- security patches
+- vulnerability fixes
+- improved network security mechanisms
+
+Outdated software can contain vulnerabilities that attackers may exploit.
+
+---
+
+### 📊 Use Network Monitoring Tools
+
+Network monitoring and security tools can help detect suspicious activity such as:
+
+- unusual ARP traffic
+- duplicate IP or MAC addresses
+- abnormal network behavior
+
+Examples include:
+
+- intrusion detection systems (IDS)
+- packet analyzers
+- network monitoring platforms
+
+These tools can help administrators identify **potential MITM attempts** early.
+
+---
+
+Understanding how MITM attacks work is an important step toward building **more secure networks and safer communication systems**.
