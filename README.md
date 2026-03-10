@@ -35,6 +35,9 @@ Client → Server.
 During a MITM attack it becomes:
 Client → Attacker → Server
 
+<img width="1536" height="1024" alt="ChatGPT Image Mar 10, 2026, 08_02_39 PM" src="https://github.com/user-attachments/assets/b5543253-943b-4ee3-b497-10e08dd8f695" />
+
+
 This allows the attacker to potentially:
 
 - 👀 intercept network traffic
