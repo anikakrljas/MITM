@@ -156,7 +156,7 @@ On a **Windows** machine you can view the ARP table using the following command:
 ```arp -a```
 
 
-🐧 Installing Required Tools on Kali Linux
+## 🐧 Installing Required Tools on Kali Linux
 
 On Kali Linux, we need to install a package that contains network analysis tools.
 
