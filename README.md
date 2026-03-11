@@ -125,6 +125,8 @@ Examples include:
 
 These tools can help administrators identify **potential MITM attempts** early.
 
+<img width="1024" height="1024" alt="ChatGPT Image Mar 11, 2026, 06_18_30 PM" src="https://github.com/user-attachments/assets/7638b920-be0d-473a-a250-e6e7c435005b" />
+
 ---
 
 Understanding how MITM attacks work is an important step toward building **more secure networks and safer communication systems**.
