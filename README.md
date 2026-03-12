@@ -212,4 +212,39 @@ After ARP spoofing is running, if the target checks its ARP table using: arp -a.
 
 The MAC address of the router should now appear as the MAC address of the Kali machine, indicating that the ARP poisoning was successful.
 
-SLika sa VM
+## 📸 ARP Spoofing Demonstration
+
+The following screenshots demonstrate how ARP poisoning changes the MAC address associated with the router on the target machine.
+
+---
+
+### 1. Kali Linux Network Interface
+
+This screenshot shows the Kali machine network configuration.  
+The MAC address of Kali is **08:00:27:63:b0:05** and the IP address is **192.168.100.4**.
+
+![Kali Network Interface](![viber_slika_2026-03-12_16-45-26-561](https://github.com/user-attachments/assets/07409e0a-c693-4b48-9ff5-3553e9cdc598))
+
+---
+
+### 2. ARP Table on Target Machine (Before the Attack)
+
+Before launching the ARP spoofing attack, the target machine correctly resolves the router's IP address **192.168.100.1** to its legitimate MAC address **52-55-c0-a0-04-01**.
+
+![ARP Table Before Attack](![viber_slika_2026-03-12_16-47-41-108](https://github.com/user-attachments/assets/c943404c-9e1f-41a9-b846-da0ff0634d5e))
+
+---
+
+### 3. ARP Table on Target Machine (After the Attack)
+
+After running `arpspoof`, the MAC address associated with the router IP **192.168.100.1** changes to **08-00-27-63-b0-05**, which is the MAC address of the Kali machine.
+
+This indicates that the target machine now believes Kali is the router, demonstrating a successful **ARP poisoning / Man-in-the-Middle attack**.
+
+![ARP Table After Attack](![viber_slika_2026-03-12_16-47-40-778](https://github.com/user-attachments/assets/efd11be9-2472-449d-a67e-7c92128622df))
+
+---
+
+### ✅ Result
+
+The change of the router's MAC address in the ARP table proves that the attacker successfully inserted themselves between the router and the target machine.
