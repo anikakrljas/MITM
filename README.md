@@ -231,7 +231,7 @@ The MAC address of Kali is **08:00:27:63:b0:05** and the IP address is **192.168
 
 Before launching the ARP spoofing attack, the target machine correctly resolves the router's IP address **192.168.100.1** to its legitimate MAC address **52-55-c0-a0-04-01**.
 
-![beforeAttack](https://github.com/user-attachments/assets/d03e886c-6f70-4b91-a406-5ccbbdcea886)
+
 
 ---
 
@@ -240,6 +240,8 @@ Before launching the ARP spoofing attack, the target machine correctly resolves 
 After running `arpspoof`, the MAC address associated with the router IP **192.168.100.1** changes to **08-00-27-63-b0-05**, which is the MAC address of the Kali machine.
 
 This indicates that the target machine now believes Kali is the router, demonstrating a successful **ARP poisoning / Man-in-the-Middle attack**.
+
+
 
 ![afterAttack](https://github.com/user-attachments/assets/cdb5c13b-d364-403d-82ac-78186f4f2c46)
 
