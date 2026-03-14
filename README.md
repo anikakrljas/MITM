@@ -242,9 +242,6 @@ After running `arpspoof`, the MAC address associated with the router IP **192.16
 This indicates that the target machine now believes Kali is the router, demonstrating a successful **ARP poisoning / Man-in-the-Middle attack**.
 
 
-
-![afterAttack](https://github.com/user-attachments/assets/cdb5c13b-d364-403d-82ac-78186f4f2c46)
-
 ---
 
 ### ✅ Result
