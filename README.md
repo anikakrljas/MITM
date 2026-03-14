@@ -31,8 +31,11 @@ The purpose of this repository is to **learn how attacks work in order to better
 A **Man-in-the-Middle (MITM)** attack occurs when an attacker secretly intercepts communication between two devices on a network.
 
 Normally communication happens directly:
+
 Client → Server.
+
 During a MITM attack it becomes:
+
 Client → Attacker → Server
 
 <img width="1083" height="724" alt="mitm_diagram_resized_border" src="https://github.com/user-attachments/assets/dcbb927e-2199-4262-9da2-ce3ae5e65cc3" />
@@ -132,7 +135,8 @@ These tools can help administrators identify **potential MITM attempts** early.
 Understanding how MITM attacks work is an important step toward building **more secure networks and safer communication systems**.
 
 ---
-# 🧪 ARP Spoofing / ARP Poisoning
+
+## 🧪 ARP Spoofing / ARP Poisoning
 
 One of the most common ways to perform a local MITM attack is **ARP Spoofing**.
 
@@ -157,16 +161,19 @@ Before running the demonstration in a **controlled lab environment**, it is nece
 
 On a **Windows** machine you can view the ARP table using the following command:
 
-```arp -a```
+```bash
+arp -a
+```
 
 
 ## 🐧 Installing Required Tools on Kali Linux
 
 On Kali Linux, we need to install a package that contains network analysis tools.
 
-```sudo su```
-
-```sudo apt install dsniff```
+```bash
+sudo su
+sudo apt install dsniff
+```
 
 The dsniff package includes several tools used for network traffic analysis and security testing.
 
@@ -176,9 +183,10 @@ Before starting ARP spoofing, we need to collect some basic network information.
 
 Check the IP address of the Kali machine:
 
-```hostname -I```
-
-```ip route | grep default```
+```bash
+hostname -I
+ip route | grep default
+```
 
 ## ⚡ ARP Spoofing with arpspoof
 
@@ -231,7 +239,7 @@ The MAC address of Kali is **08:00:27:63:b0:05** and the IP address is **192.168
 
 Before launching the ARP spoofing attack, the target machine correctly resolves the router's IP address **192.168.100.1** to its legitimate MAC address **52-55-c0-a0-04-01**.
 
-
+![beforeAttack]()
 
 ---
 
@@ -241,9 +249,28 @@ After running `arpspoof`, the MAC address associated with the router IP **192.16
 
 This indicates that the target machine now believes Kali is the router, demonstrating a successful **ARP poisoning / Man-in-the-Middle attack**.
 
+![afterAttack]()
 
 ---
 
 ### ✅ Result
 
 The change of the router's MAC address in the ARP table proves that the attacker successfully inserted themselves between the router and the target machine.
+
+
+# 🦈 Wireshark
+
+**Wireshark** is a network protocol analyzer used to capture and inspect network traffic in real time.
+
+It allows users to observe the data packets that travel across a network and analyze how devices communicate using different network protocols.
+
+Wireshark is commonly used for:
+
+- 🛠️ troubleshooting network problems  
+- 🔐 investigating security incidents  
+- 📡 learning how network protocols operate  
+- 🧪 performing cybersecurity analysis in laboratory environments  
+
+By displaying detailed information about each captured packet, such as IP addresses, protocols, ports, and packet contents, Wireshark helps analysts better understand network activity and detect potential security issues.
+
+
